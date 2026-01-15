@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+   
+    <title>Ark Survival</title>
+
+    <button onclick="toggleMusica()">🎵 Música</button>
+
+<audio id="musicaFondo" loop>
+    <source src="ARK_ Survival Evolved Theme _ EPIC VERSION [4o4ihIKQXiA].mp3" type="audio/mpeg">
+</audio>
+
+
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+     <link rel="icon" href="ICON.jpg" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <h1>BIENVENIDOS A LA PAGINA DE ARK SURVIVAL UN JUEGO DE FANTASIA</h1>
+
+    <div class="galeria">
+
+        <h1 id="tituloAnimacion">Animacion</h1>
+
+        <iframe 
+            src="https://www.youtube.com/embed/DQQS4OflzUk"
+            title="Video Ark Survival"
+            allowfullscreen>
+        </iframe>
+
+        <h1>Dinosaurios</h1>
+
+        <img src="Ark1.jpeg" class="dino" alt="">
+        <img src="A2.jpeg" class="dino" alt="">
+        <img src="E.jpeg" class="dino" alt="">
+
+    </div>
+
+    <!-- JAVASCRIPT PARA LA ANIMACIÓN -->
+   <script>
+    const musica = document.getElementById("musicaFondo");
+
+    function toggleMusica() {
+        if (musica.paused) {
+            musica.play();
+        } else {
+            musica.pause();
+        }
+    }
+
+    // --- TU CÓDIGO DE ANIMACIONES ---
+    const titulo = document.getElementById("tituloAnimacion");
+    titulo.style.opacity = 0;
+    titulo.style.transform = "translateY(-40px)";
+
+    setTimeout(() => {
+        titulo.style.transition = "1s";
+        titulo.style.opacity = 1;
+        titulo.style.transform = "translateY(0)";
+    }, 300);
+
+    const dinos = document.querySelectorAll(".dino");
+
+    dinos.forEach((img, index) => {
+        img.style.opacity = 0;
+        img.style.transform = "scale(0.5)";
+
+        setTimeout(() => {
+            img.style.transition = "0.8s";
+            img.style.opacity = 1;
+            img.style.transform = "scale(1)";
+        }, 800 + index * 300);
+    });
+</script>
