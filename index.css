@@ -8,6 +8,22 @@ body{
     
 
 }
+.logo-ark {
+display: block;
+    margin: 40px auto;
+    width: 280px;
+  opacity: 0;
+    transform: translateY(-100px) scale(0.5);
+    transition: all 1.2s ease-out;
+}
+
+.footer {
+    background: rgba(1, 16, 18, 0.85);
+    padding: 40px 20px;
+    margin-top: 60px;
+    border-top: 3px solid #00ffcc;
+}
+
 iframe{
      width: 320px;
     height: 180px;
@@ -24,4 +40,11 @@ img {
     height: 180px;
     border-radius: 10px;
     border: 4px solid rgb(42, 119, 152);
+}
+
+.boton-musica {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
 }
